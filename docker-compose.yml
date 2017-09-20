@@ -1,0 +1,24 @@
+version: '3'
+services:
+  checkout-service:
+    image: node:8.0.0-alpine
+    volumes:
+     - ./:/usr/src/app/
+     - "${HOME}/.cache/yarn:/root/.cache/yarn"
+    working_dir: /usr/src/app/
+    env_file: .env
+    depends_on:
+      - mock-server
+    links:
+      - mock-server
+    ports:
+     - "8080:8080"
+    command: ["npm", "run", "serve"]
+  mock-server:
+    image: cpoepke/mountebank-basis:latest
+    ports:
+      - "8010:8010"
+    volumes:
+     - ./tests/mockserver/:/mb/
+    command: ["mb", "--configfile", "/mb/imposters.ejs", "--allowInjection"]
+

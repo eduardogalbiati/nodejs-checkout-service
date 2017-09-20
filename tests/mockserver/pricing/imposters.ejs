@@ -1,0 +1,102 @@
+{
+  "responses": [
+    {
+      "inject": "<%- stringify(filename, 'pricing/rules/customers/nike.ejs') %>"
+    }
+  ],
+  "predicates": [
+    {
+      "equals": {
+        "path": "/pricing/rules",
+        "query": {
+          "customerId": "nike"
+        }
+      }
+    }
+  ]
+},
+{
+  "responses": [
+    {
+      "inject": "<%- stringify(filename, 'pricing/rules/customers/unilever.ejs') %>"
+    }
+  ],
+  "predicates": [
+    {
+      "equals": {
+        "path": "/pricing/rules",
+        "query": {
+          "customerId": "unilever"
+        }
+      }
+    }
+  ]
+},
+{
+  "responses": [
+    {
+      "inject": "<%- stringify(filename, 'pricing/rules/customers/apple.ejs') %>"
+    }
+  ],
+  "predicates": [
+    {
+      "equals": {
+        "path": "/pricing/rules",
+        "query": {
+          "customerId": "apple"
+        }
+      }
+    }
+  ]
+},
+{
+  "responses": [
+    {
+      "inject": "<%- stringify(filename, 'pricing/rules/customers/ford.ejs') %>"
+    }
+  ],
+  "predicates": [
+    {
+      "equals": {
+        "path": "/pricing/rules",
+        "query": {
+          "customerId": "ford"
+        }
+      }
+    }
+  ]
+},
+{
+  "responses": [
+    {
+      "inject": "<%- stringify(filename, 'pricing/rules/customers/default.ejs') %>"
+    }
+  ],
+  "predicates": [
+    {
+      "equals": {
+        "path": "/pricing/rules",
+        "query": {
+          "customerId": "default"
+        }
+      }
+    }
+  ]
+},
+{
+  "responses": [
+    {
+      "inject": "<%- stringify(filename, 'pricing/rules/customers/not-found.ejs') %>"
+    }
+  ],
+  "predicates": [
+    {
+      "matches": {
+        "path": "/pricing/rules",
+        "query": {
+          "customerId": ""
+        }
+      }
+    }
+  ]
+}

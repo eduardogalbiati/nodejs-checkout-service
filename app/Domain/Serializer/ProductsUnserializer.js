@@ -11,6 +11,9 @@ class ProductsUnserializer {
    * @returns {array} - Array of Products objects
    */
   static unserialize(data) {
+    if (data.products === undefined) {
+      throw (new Error('Payload should have products index'));
+    }
     const products = flatMap(data.products, (product) => {
       return times(product.quantity, () => {
         return new Product(product.id);

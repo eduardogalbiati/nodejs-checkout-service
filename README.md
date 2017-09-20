@@ -1,7 +1,7 @@
 # nodejs-checkout-service
 
-A Rest API build with Node 8, Restify, Docker Compose and MountBank mockserver.
-Recieves a product list with a customer id associated, deal with discounts and return a cart object with all information about the products values
+A Rest API built with Node 8, Restify, Docker Compose and MountBank mockserver.
+Recieves a product list with a customer id associated, deal with discounts and return a cart object with all information about the products.
 
 
 # Table of Contents
@@ -47,11 +47,11 @@ nodejs-checkout-service can be accessed on ```localhost:8080```
 
 ## Running the unit tests
 
-```docker-compose -f docker-compose.unit.yml up```
+```docker-compose -f docker-compose-unit.yml up```
 
 ## Running the functional tests
 
-```docker-compose -f docker-compose.functional.yml up```
+```docker-compose -f docker-compose-functional.yml up```
 
 
 ## Built With
@@ -136,7 +136,7 @@ nodejs-checkout-service can be accessed on ```localhost:8080```
 
   #### Body Validation
 
-  The validation is based on [Json draft schema](http://json-schema.org/documentation.html), I think is the best way to deal with json validation, there is a awesome tool to generate it [Json schema generator](https://jsonschema.net/#/editor)
+  The validation is based on [Json draft schema](http://json-schema.org/documentation.html), there is a awesome tool to generate it [Json schema generator](https://jsonschema.net/#/editor)
 
   #### Product Unserializer
 
@@ -212,6 +212,8 @@ nodejs-checkout-service can be accessed on ```localhost:8080```
   Extends abstract responder and knows how to build a responde from ```Cart``` object
 
 
+# Unit test coverage
+  ![alt tag](https://raw.githubusercontent.com/eduardogalbiati/nodejs-checkout-service/master/docs/coverage/coverage-report.png) 
 
 
 

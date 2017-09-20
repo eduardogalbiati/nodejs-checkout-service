@@ -28,7 +28,7 @@ describe('total', function() {
     }
 
     try {
-      response = await request(`http://0.0.0.0:8080/checkout`,
+      response = await request(`http://checkout-service:8080/checkout`,
         {
           method: 'POST',
           data: payload,
@@ -56,7 +56,7 @@ describe('total', function() {
       ]
     }
     try {
-      response = await request(`http://0.0.0.0:8080/checkout`,
+      response = await request(`http://checkout-service:8080/checkout`,
         {
           method: 'POST',
           data: payload,
@@ -95,7 +95,7 @@ describe('total', function() {
     }
 
     try {
-      response = await request(`http://0.0.0.0:8080/checkout`,
+      response = await request(`http://checkout-service:8080/checkout`,
         {
           method: 'POST',
           data: payload,
@@ -129,7 +129,7 @@ describe('total', function() {
     }
 
     try {
-      response = await request(`http://0.0.0.0:8080/checkout`,
+      response = await request(`http://checkout-service:8080/checkout`,
         {
           method: 'POST',
           data: payload,
@@ -162,7 +162,7 @@ describe('total', function() {
     }
 
     try {
-      response = await request(`http://0.0.0.0:8080/checkout`,
+      response = await request(`http://checkout-service:8080/checkout`,
         {
           method: 'POST',
           data: payload,

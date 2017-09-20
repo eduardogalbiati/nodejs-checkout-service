@@ -1,6 +1,6 @@
 version: '3'
 services:
-  development-app-mini-resume-test:
+  checkout-service:
     image: node:8.0.0-alpine
     volumes:
      - ./:/usr/src/app/
@@ -13,7 +13,7 @@ services:
       - mock-server
     ports:
      - "8080:8080"
-    command: ["npm", "run", "test"]
+    command: ["npm", "run", "test-unit"]
   mock-server:
     image: cpoepke/mountebank-basis:latest
     ports:
